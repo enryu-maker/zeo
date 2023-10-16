@@ -4,9 +4,12 @@ function App() {
 
   return (
     <>
-  <div className="container">
+    <div className="app">
+    <div className="container">
     ZeoSync
   </div>
+    </div>
+  
 
 
     </>
