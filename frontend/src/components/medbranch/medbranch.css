@@ -1,0 +1,47 @@
+.medbranch{
+    .branch{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0px;
+        margin-left: 20px;
+        /* border: 1px solid red; */
+        .circle{
+            border-radius: 50%;
+            background-color: #dee7ff;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3A57A6;
+            
+        }
+        .hline{
+            margin-left: 10px;
+            margin-top: 10px;
+            border: 1.5px solid #3A57A6;
+            width: 60px;
+            height: 3px;
+            background-color: #dee7ff;
+        }
+        
+        .info{
+            padding: 0px 7px;
+            
+        }
+    }
+    
+    .exbranch{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        margin-left: 30px;
+        
+        
+        .vline{
+            border: 1.5px solid #3A57A6;
+            background-color: #dee7ff;
+            height: 50px;
+            width: 3px;
+            
+        }
+    }
+
+}
