@@ -2,13 +2,16 @@
 import { Button } from "@mui/material";
 import "./header.css"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import {  useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+  const navigate = useNavigate()
   return (
     <div className="header">
         <div className="left">
             {/* <button className="back">back</button> */}
-            <Button variant="outlined  " >
+            <Button variant="outlined " onClick={()=> navigate(-1)} >
             <ArrowBackIcon  htmlColor="#eee" />
             </Button>
             

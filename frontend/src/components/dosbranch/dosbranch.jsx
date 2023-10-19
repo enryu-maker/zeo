@@ -1,7 +1,7 @@
 // import React from 'react'
 import "./dosbranch.css"
 const DosBranch = () => {
-  return (
+  return ( 
     
       <div className='dosbranch'>
       <div className='branch'>
@@ -12,9 +12,9 @@ const DosBranch = () => {
         {/* <div className="hline"> </div>
         <div className="info"> test1 </div> */}
       </div>
-      <div className="exbranch">
-        {/* <div className="vline"></div> */}
-      </div>
+      {/* <div className="exbranch">
+        <div className="vline"></div>
+      </div> */}
     </div>
     
   )

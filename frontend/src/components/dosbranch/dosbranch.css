@@ -3,9 +3,12 @@
         display: flex;
         flex-direction: column;
         padding: 0px 0px;
-        margin-left: 20px;
+        margin-left: 20px; 
         /* border: 1px solid red; */
         .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 10px;
             border-radius: 5px;
             background-color: #dee7ff;

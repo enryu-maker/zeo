@@ -12,7 +12,7 @@ const Footer = () => {
                 </div>
                 <div className="right">
                 <div className="link">
-            <img src="/img/language.png" alt="" />
+            <img src="./src/assets/language.png" alt="" />
             <span>English</span>
           </div>
                 </div>
