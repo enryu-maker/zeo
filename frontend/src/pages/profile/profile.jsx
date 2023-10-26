@@ -7,18 +7,22 @@ import MedBranch from "../../components/medbranch/medbranch";
 import "./profile.css"
 import Header from "../../components/header/header";
 import CloseIcon from '@mui/icons-material/Close';
-import { ProfileData } from "../../utils/data";
+import { ProfileData, RoomsData } from "../../utils/data";
+import { useParams } from "react-router-dom";
+import { LeftComponent, RightComponent } from "../../components/profile/ProfileComponents";
 
 
 
 const Profile = () => { 
-
-  const [open,setOpen]=useState(false)
-
-  const PopUpPatiantInfo=()=>
-  {
-      return (
-        <>
+  const {id} = useParams()
+  const [Profile , setProfile] = useState([])
+  // changes Here
+  const data = RoomsData[0].Beds[id-1]
+  console.log("profiles" ,data);
+  
+const dosages=()=>{
+  return(
+    <>
          <div className='patientInfo'> 
             <div className="container">
                  
@@ -74,10 +78,8 @@ const Profile = () => {
            
         </div> 
         </>
-      )
-    }
-    
-
+  )
+}
 
 
   return (
@@ -86,11 +88,11 @@ const Profile = () => {
         width:'100%',
       }
     }>
-    <Header/>
+    <Header title={data.title} description={'Bed'}/>
     <div className='profile'>
             {/* <button className='backbtn'>Back</button> */}
         <div className="container">
-            <div className="left">
+            {/* <div className="left">
               <div className="medhis">
                 <h3 className='title'>Medical History</h3>
                 <span className="medcard">
@@ -99,30 +101,29 @@ const Profile = () => {
                 </span>
               </div> 
               <button className='btn'>Discharge</button>  
-              </div>
+              </div> */}
+              <LeftComponent data={data.profiles[0]} />
               <div className="vl">
                 
               </div>
-            <div className="right">
+            {/* <div className="right">
               <div className="doshis">
                 <h3 className='title'>Dosage History</h3>
                 <span className="doscard">
                   <DosBranch/>
+                  <div className="time">Morning </div>
                 </span>
               </div>
               <button className='btn' onClick={()=> setOpen(true)}>Pateint Details</button>  
               
-              </div>
+              </div> */}
+              <RightComponent data={data.profiles[1]}/>
 
         </div>
       
     </div>
     </div>
-    {
-      open ? <>
-      <PopUpPatiantInfo open={open} setOpen={setOpen}/>
-      </>:null
-    }
+    
     </>
   )
 }

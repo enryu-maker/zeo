@@ -2,25 +2,35 @@
 import './room.css';
 import Bed from '../../components/bed/bed'; 
 import Header from '../../components/header/header';
+import { RoomsData } from '../../utils/data';
+import { Link } from 'react-router-dom';
 
 const Room = () => {
+  const data = RoomsData;
+  console.log(data[0].Beds);
   return (<>
+
   <div style={
     {
       width:'100%',
     }
   }>
-
-      <Header/>
+      
+      <Header title ={data[0].room} description={"Room"}/>
+     
+  
     <div className='room'>
         <div className="container"> 
           <div className="beds">
-            <Bed/>
-            <Bed/>
-            <Bed/>
-            <Bed/>
-            <Bed/>
-            <Bed/>
+          {
+    data[0].Beds.map((item) => (
+      <>
+    
+      <Bed title={item.title} data={item} />
+   
+      </>
+    ))
+  }
             </div>
             <div className="clean">
               <button className='cleanbtn'>Cleaned</button>

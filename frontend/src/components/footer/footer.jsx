@@ -7,8 +7,8 @@ const Footer = () => {
             <hr/>
             <div className="bottom">
                 <div className="left">
-                    <h2>ZeoSync</h2>
-                    <span>© ZeoSync Ltd. 2023</span>
+                    <h2>ZoeSync</h2>
+                    <span>© ZoeSync Ltd. 2023</span>
                 </div>
                 <div className="right">
                 <div className="link">

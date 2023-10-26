@@ -4,7 +4,7 @@ import "./header.css"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {  useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({title,description}) => {
 
   const navigate = useNavigate()
   return (
@@ -18,7 +18,8 @@ const Header = () => {
         </div>
         
         <div className="middle">
-            <h3 className="title">Room 101</h3>
+            <h3 className="title">{description} {title
+            }</h3>
         </div>
         <div className="right">
 
