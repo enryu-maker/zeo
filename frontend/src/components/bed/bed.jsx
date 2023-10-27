@@ -8,7 +8,7 @@ const Bed = ({title , data}) => {
     <Link to={`/profile/${data.id}` }>
     <div className='bed'>
             <div className="bedicon">
-              <img src="./src/assets/bed-h.png" alt="bed"/>
+              <img src="./src/assets/bed-h.png" alt="bed" className="img"/>
             </div>
             <h3 className='bedNo'>{title}</h3>
       

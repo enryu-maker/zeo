@@ -7,17 +7,18 @@
         position: fixed;
         
         
+        
 
-        img{
+        .img{
             width: 24px;
             height: 24px;
         }
-
+ 
         .container{
             width: 100%;
-            
-            hr{
-                margin: 0px 0px;
+            padding: 20px 20px;
+            .hr{
+                margin: 10px 0px;
                 height: 0;
                 border: 1px solid lightgray;
             }
@@ -31,11 +32,12 @@
                     display: flex;
                     align-items: center;
                     gap: 20px;
-                    h2{
-        
-                    }
-                    span{
+                    
+                    .span{
                         font-size: 13px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5  px;
                     }
                 
                 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../../pages/profile/profile.css"
 import MedBranch from '../medbranch/medbranch'
 import CloseIcon from '@mui/icons-material/Close';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ProfileData, ProfilesMedData } from '../../utils/data';
 import Doscard from '../doscard/doscard';
 
@@ -91,7 +91,12 @@ export const LeftComponent = ({data}) => {
                 
                 </span>
               </div> 
+              <Link to="/bill" style={{
+                width:'100%'
+              }} >              
               <button className='btn' >Discharge</button>  
+              </Link>
+
               </div>
 
               {
