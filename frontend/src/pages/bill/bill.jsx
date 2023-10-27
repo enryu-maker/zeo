@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import "./bill.css"
-// import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close';
 import Lottie from "lottie-react";
 import successAnimation from "../../assets/success.json";
 
 const Bill = () => {
   const [open,setOpen]=useState(false)
+
+  
   const PopUpSuccessful=()=>
   {
       return (
@@ -14,12 +16,22 @@ const Bill = () => {
             <div className="container">
                  
             <div className="centre">
+              <div className="close" style={{
+                display:'flex',
+                alignItems:'center',
+                justifyContent:'right',
+                paddingRight:'30px'
+              }}>
+
+            <CloseIcon  htmlColor="#1c2833 " sx={{cursor:'pointer' , mt:'25px'}} onClick={() => setOpen(false)} />
+              </div>
+
               <div style={{
                 display:'flex',
                 justifyContent:'space-evenly',
                 alignItems:"center",
                 flexDirection:'column',
-                padding:'10px 40px'
+                padding:'10px 50px'
                }}>
 
                 {/* <img src="" alt="" /> */}
@@ -37,6 +49,7 @@ const Bill = () => {
         </>
       )
     }
+
 
   return (
     <>
